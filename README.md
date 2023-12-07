@@ -1,2 +1,2 @@
 # peach-task
-Тестовое задание
+Тестовое задание Frontend developer от Peach
