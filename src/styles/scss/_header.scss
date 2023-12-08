@@ -1,0 +1,15 @@
+.header {
+  padding: 0 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid $border;
+  &__icon {
+    background-image: url("../../assets/svg/logo.svg");
+    width: 125px;
+    height: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

@@ -1,0 +1,45 @@
+.nav {
+  padding: 32px 0;
+
+  &-items {
+    display: flex;
+    align-items: center;
+  }
+
+  &-item {
+    color: $grey;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0 0 0 22px;
+    cursor: pointer;
+    transition: all ease 0.8s;
+
+    &:hover {
+      color: $red;
+    }
+  }
+}
+
+.map .nav {
+  padding: 32px 0 0;
+  transition: all ease-in 0.35s;
+  &.inactive {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+}
+
+.map .nav-item {
+  margin: 0 0 0 32px;
+  padding: 0 0 29px;
+  border-bottom: 3px solid $white;
+  background-color: transparent;
+  transition: none;
+  &.active {
+    border-bottom: 3px solid $red;
+    color: $red;
+    pointer-events: none;
+  }
+}

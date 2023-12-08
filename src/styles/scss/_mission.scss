@@ -1,0 +1,47 @@
+.mission {
+  margin: 10px 0 100px;
+  &__bg {
+    position: relative;
+    background-color: $red;
+    padding: 140px 70px;
+  }
+
+  &__title {
+    z-index: 2;
+    position: relative;
+    color: $white;
+    text-align: center;
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 100%;
+    margin: 0 0 45px;
+  }
+
+  &__description {
+    z-index: 2;
+    position: relative;
+    color: $white;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  &__pattern {
+    z-index: 1;
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 348px;
+    height: 377px;
+    &.left {
+      top: 50px;
+      left: -23px;
+      background-image: url('../../assets/img/pattern-left.png');
+    }
+    &.right {
+      top: 50px;
+      right: -23px;
+      background-image: url('../../assets/img/pattern-right.png');
+    }
+  }
+}

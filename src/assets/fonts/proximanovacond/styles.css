@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Proxima Nova Condensed';
+  src: url(./proximanovacond_regular.eot);
+  src: url(./proximanovacond_regular.eot?#iefix) format('embedded-opentype'),
+       url(./proximanovacond_regular.otf) format('otf'),
+       url(./proximanovacond_regular.ttf) format('truetype'),
+       url(./proximanovacond_regular.woff) format('woff'),
+       url(./proximanovacond_regular.woff2) format('woff2');
+}

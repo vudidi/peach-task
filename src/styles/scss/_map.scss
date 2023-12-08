@@ -1,0 +1,308 @@
+.map {
+  z-index: 1;
+  position: relative;
+  margin: -18px 0 0;
+
+  &__menu {
+    padding: 0 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.06);
+  }
+
+  &__panel {
+    color: $grey;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 100%;
+    display: flex;
+
+    &-icon {
+      display: block;
+      background-image: url("../../assets/svg/arrow.svg");
+      width: 24px;
+      height: 24px;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0 0 0 16px;
+      cursor: pointer;
+      transition: all ease-in 0.35s;
+
+      &.active {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__popup {
+    z-index: 2;
+    position: absolute;
+    top: 104px;
+    left: 0;
+    right: 0;
+    padding: 30px 70px;
+    background-color: $white;
+    box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.06);
+    visibility: hidden;
+    opacity: 0;
+    transition: all ease-in 0.35s;
+
+    &.opened {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &-items {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &-item {
+      font-family: 'Proxima Nova';
+      color: $grey;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 20px;
+
+      & ol li {
+        font-weight: 400;
+        margin: 12px 0 0;
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+    background-image: url('../../assets/img/map.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1192px;
+    height: 786px;
+    margin: 0 auto;
+    transition: all ease-in 0.35s;
+
+    &.inactive {
+      opacity: 0.3;
+    }
+  }
+
+  &__points {
+    & #dot-moscow {
+      top: 314px;
+      left: 126px;
+
+      & .moscow {
+        font-size: 14px;
+      }
+    }
+
+    & #dot-yaroslavl {
+      top: 288px;
+      left: 158px;
+    }
+
+    & #dot-voronezh {
+      top: 334px;
+      left: 77px;
+    }
+
+    & #dot-belgorod {
+      top: 368px;
+      left: 72px;
+    }
+
+    & #dot-kaliningrad {
+      top: 213px;
+      left: 14px;
+    }
+
+    & #dot-saint-petersburg {
+      top: 219px;
+      left: 103px;
+
+      & .saint-petersburg {
+        font-size: 16px;
+      }
+    }
+
+    & #dot-rostov {
+      top: 409px;
+      left: 45px;
+
+      & .rostov {
+        font-size: 14px;
+      }
+    }
+
+    & #dot-volgograd {
+      top: 450px;
+      left: 89px;
+    }
+
+    & #dot-krasnodar {
+      top: 470px;
+      left: 24px;
+
+      & .krasnodar {
+        font-size: 14px;
+      }
+    }
+
+    & #dot-nizhniy-novgorod {
+      top: 350px;
+      left: 168px;
+    }
+
+    & #dot-samara {
+      top: 394px;
+      left: 176px;
+    }
+
+    & #dot-kazan {
+      top: 390px;
+      left: 239px;
+    }
+
+    & #dot-ufa {
+      top: 426px;
+      left: 250px;
+    }
+
+    & #dot-orenburg {
+      top: 452px;
+      left: 203px;
+    }
+
+    & #dot-izhevsk {
+      top: 379px;
+      left: 314px;
+    }
+
+    & #dot-perm {
+      top: 387px;
+      left: 368px;
+
+      & .perm {
+        font-size: 14px;
+      }
+    }
+
+    & #dot-surgut {
+      top: 400px;
+      left: 423px;
+    }
+
+    & #dot-ekaterinburg {
+      top: 417px;
+      left: 296px;
+    }
+
+    & #dot-chelyabinsk {
+      top: 455px;
+      left: 296px;
+
+      & .chelyabinsk {
+        font-size: 14px;
+      }
+    }
+
+    & #dot-tyumen {
+      top: 452px;
+      left: 397px;
+
+      & .tyumen {
+        font-size: 14px;
+      }
+    }
+
+    & #dot-omsk {
+      top: 568px;
+      left: 450px;
+
+      & .omsk {
+        font-size: 14px;
+      }
+    }
+
+    & #dot-novosibirsk {
+      top: 545px;
+      left: 484px;
+    }
+
+    & #dot-tomsk {
+      top: 530px;
+      left: 568px;
+
+      & .tomsk {
+        font-size: 14px;
+      }
+    }
+
+    & #dot-krasnoyarsk {
+      top: 546px;
+      left: 612px;
+    }
+
+    & #dot-irkutsk {
+      top: 576px;
+      left: 674px;
+
+      & .irkutsk {
+        font-size: 14px;
+      }
+    }
+
+    & #dot-khabarovsk {
+      top: 570px;
+      left: 958px;
+
+      & .khabarovsk {
+        font-size: 16px;
+      }
+    }
+
+    & #dot-vladivostok {
+      top: 667px;
+      left: 936px;
+
+      & .vladivostok {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__point {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: default;
+    opacity: 1;
+    transition: all ease-in 0.35s;
+
+    &.invisible {
+      opacity: 0;
+    }
+
+    &-dot {
+      background-image: url("../../assets/svg/point.svg");
+      width: 10px;
+      height: 10px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &-name {
+      margin: 2px 0 0;
+      color: $grey;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 100%;
+
+      &.moscow {}
+    }
+  }
+}
