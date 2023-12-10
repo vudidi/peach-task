@@ -9,6 +9,7 @@
     align-items: center;
     justify-content: space-between;
     box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.06);
+    overflow-x: auto;
   }
 
   &__panel {
@@ -66,11 +67,40 @@
       font-weight: 600;
       line-height: 20px;
 
-      & ol li {
+      & .item-title {
+        position: relative;
+        display: inline-block;
+        padding: 0 14px 0 0;
+      }
+
+      & .icon {
+        display: none;
+        background-image: url("../../assets/svg/triangle-icon.svg");
+        width: 8px;
+        height: 8px;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: all ease-in 0.35s;
+        position: absolute;
+        top: 2px;
+        right: 0;
+        pointer-events: none;
+
+        &.active {
+          transform: rotate(180deg);
+        }
+      }
+
+      & .list li {
         font-weight: 400;
         margin: 12px 0 0;
       }
     }
+  }
+
+  &__container {
+    overflow-x: auto;
+    overflow-y: visible;
   }
 
   &__image {
@@ -79,11 +109,10 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    width: 1192px;
+    width: 1190px;
     height: 786px;
     margin: 0 auto;
     transition: all ease-in 0.35s;
-
     &.inactive {
       opacity: 0.3;
     }
@@ -301,8 +330,286 @@
       font-size: 12px;
       font-weight: 600;
       line-height: 100%;
+    }
+  }
+}
 
-      &.moscow {}
+@media screen and (max-width: 1180px) {
+  .map {
+    &__menu {
+      padding: 0 30px;
+    }
+
+    &__panel {
+      font-size: 20px;
+
+      &-icon {
+        width: 20px;
+        height: 20px;
+        margin: 0 0 0 6px;
+      }
+    }
+
+    &__popup {
+      padding: 18px 5px;
+      top: 90px;
+
+      &-item {
+        font-size: 14px;
+        line-height: 14px;
+      }
+    }
+
+    &__image {
+      width: 862px;
+      height: 452px;
+    }
+
+    &__points {
+      & #dot-moscow {
+        top: 166px;
+        left: 86px;
+
+        & .moscow {
+          font-size: 14px;
+        }
+      }
+
+      & #dot-yaroslavl {
+        top: 146px;
+        left: 108px;
+      }
+
+      & #dot-voronezh {
+        top: 180px;
+        left: 50px;
+      }
+
+      & #dot-belgorod {
+        top: 204px;
+        left: 48px;
+      }
+
+      & #dot-kaliningrad {
+        top: 93px;
+        left: 9px;
+      }
+
+      & #dot-saint-petersburg {
+        top: 99px;
+        left: 80px;
+
+        & .saint-petersburg {
+          font-size: 16px;
+        }
+      }
+
+      & #dot-rostov {
+        top: 237px;
+        left: 20px;
+
+        & .rostov {
+          font-size: 14px;
+        }
+      }
+
+      & #dot-volgograd {
+        top: 265px;
+        left: 60px;
+      }
+
+      & #dot-krasnodar {
+        top: 276px;
+        left: 10px;
+
+        & .krasnodar {
+          font-size: 14px;
+        }
+      }
+
+      & #dot-nizhniy-novgorod {
+        top: 190px;
+        left: 120px;
+      }
+
+      & #dot-samara {
+        top: 224px;
+        left: 120px;
+      }
+
+      & #dot-kazan {
+        top: 214px;
+        left: 170px;
+      }
+
+      & #dot-ufa {
+        top: 245px;
+        left: 178px;
+      }
+
+      & #dot-orenburg {
+        top: 268px;
+        left: 140px;
+      }
+
+      & #dot-izhevsk {
+        top: 204px;
+        left: 230px;
+      }
+
+      & #dot-perm {
+        top: 217px;
+        left: 265px;
+
+        & .perm {
+          font-size: 14px;
+        }
+      }
+
+      & #dot-surgut {
+        top: 230px;
+        left: 310px;
+      }
+
+      & #dot-ekaterinburg {
+        top: 242px;
+        left: 206px;
+      }
+
+      & #dot-chelyabinsk {
+        top: 270px;
+        left: 206px;
+
+        & .chelyabinsk {
+          font-size: 14px;
+        }
+      }
+
+      & #dot-tyumen {
+        top: 270px;
+        left: 285px;
+
+        & .tyumen {
+          font-size: 14px;
+        }
+      }
+
+      & #dot-omsk {
+        top: 346px;
+        left: 322px;
+
+        & .omsk {
+          font-size: 14px;
+        }
+      }
+
+      & #dot-novosibirsk {
+        top: 315px;
+        left: 362px;
+      }
+
+      & #dot-tomsk {
+        top: 300px;
+        left: 416px;
+
+        & .tomsk {
+          font-size: 14px;
+        }
+      }
+
+      & #dot-krasnoyarsk {
+        top: 316px;
+        left: 454px;
+      }
+
+      & #dot-irkutsk {
+        top: 346px;
+        left: 500px;
+
+        & .irkutsk {
+          font-size: 14px;
+        }
+      }
+
+      & #dot-khabarovsk {
+        top: 345px;
+        left: 684px;
+
+        & .khabarovsk {
+          font-size: 16px;
+        }
+      }
+
+      & #dot-vladivostok {
+        top: 420px;
+        left: 668px;
+
+        & .vladivostok {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .map {
+    &__menu {
+      padding: 0 5px;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    &__panel {
+      padding: 18px 0 0;
+     & div {
+      z-index: 2;
+     }
+     &-icon {
+      z-index: 2;
+     }
+    }
+
+    &__popup {
+      top: 0;
+      padding: 40px 5px 18px;
+      box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.06);
+      &.opened {
+        z-index: 1;
+      }
+      &-items {
+        padding: 20px 0 0;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+      &-item {
+        width: 120px;
+        margin: 0 14px 15px 0;
+        &:last-of-type {
+          margin: 0;
+        }
+
+        & .item-title {
+          cursor: pointer;
+          &.active {
+            color: $red;
+          }
+        }
+
+        & .icon {
+          display: block;
+          &.active {
+            transform: rotate(180deg);
+          }
+        }
+        & .list {
+          display: none;
+          &.visible {
+            display: block;
+          }
+        }
+      }
     }
   }
 }

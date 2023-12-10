@@ -15,7 +15,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
   }
 
@@ -26,35 +26,34 @@
       position: relative;
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
       width: 615px;
       height: 260px;
       overflow: hidden;
       background-position: center;
-      background-size: contain;
+      background-size: cover;
 
       &.decisions {
-        background-image: url('../../assets/img/business-img1.png');
+        background-image: url("../../assets/img/business-img1.png");
       }
 
       &.cybersecurity {
-        background-image: url('../../assets/img/business-img2.png');
+        background-image: url("../../assets/img/business-img2.png");
       }
 
       &.import-substitution {
-        background-image: url('../../assets/img/business-img3.png');
+        background-image: url("../../assets/img/business-img3.png");
       }
 
       &.cloud-solutions {
-        background-image: url('../../assets/img/business-img4.png');
+        background-image: url("../../assets/img/business-img4.png");
       }
 
       &.development {
-        background-image: url('../../assets/img/business-img5.png');
+        background-image: url("../../assets/img/business-img5.png");
       }
 
       &.technical-support {
-        background-image: url('../../assets/img/business-img6.png');
+        background-image: url("../../assets/img/business-img6.png");
       }
     }
 
@@ -97,8 +96,82 @@
   }
 }
 
- .development .business__card-title {
+.development .business__card-title {
   margin: 18px 0 20px;
 }
 
+@media screen and (max-width: 900px) {
+  .business {
+   margin: 0 0 50px;
+    &__title {
+      font-size: 28px;
+      margin: 0 5px 15px;
+    }
+    &__cards {
+      align-items: flex-start;
+    }
+    &__card {
+      margin: 10px 0 0;
+      padding: 0 5px;
+      max-height: 60px;
+      transition: max-height ease-in-out 0.35s;
+      overflow: hidden;
+      &-container {
+        padding: 0 10px;
+        top: 0;
+      }
 
+      &-bg {
+        width: 280px;
+        height: 240px;
+      }
+
+      &-title {
+        font-size: 20px;
+        max-width: 260px;
+        margin: 20px 0 12px;
+
+        & .icon {
+          display: block;
+          background-image: url("../../assets/svg/arrow-white.svg");
+          width: 24px;
+          height: 24px;
+          background-position: center;
+          background-repeat: no-repeat;
+          margin: auto 0 auto auto;
+          cursor: pointer;
+          pointer-events: none;
+          transition: all ease-in 0.35s;
+        }
+      }
+
+      &-description {
+        margin: 0;
+        font-size: 16px;
+        line-height: 140%;
+        max-width: 260px;
+      }
+    }
+  }
+
+  .development .business__card-title {
+    margin: 10px 0 10px;
+  }
+  .technical-support .business__card-title {
+    margin: 10px 0 10px;
+  }
+
+  .business__card-container:hover .icon {
+    transform: rotate(180deg);
+  }
+
+  .business__card:hover {
+    max-height: 240px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .business {
+    margin: 0 0 20px;
+  }
+}

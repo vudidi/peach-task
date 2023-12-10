@@ -10,6 +10,7 @@ const dropDownIcon = map.querySelector(".map__panel-icon");
 const mapPopup = map.querySelector(".map__popup");
 const mapImage = map.querySelector(".map__image");
 const mapNav = map.querySelector(".nav");
+const mapItemTitles = map.querySelectorAll(".item-title");
 
 dropDownIcon.addEventListener("click", () => {
   dropDownIcon.classList.toggle("active");
@@ -41,5 +42,13 @@ mapBtns.forEach((btn) => {
         point.classList.add("invisible");
       }
     });
+  });
+});
+
+mapItemTitles.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    e.target.classList.toggle("active");
+    e.target.nextElementSibling.classList.toggle("visible");
+    e.target.firstElementChild.classList.toggle("active");
   });
 });

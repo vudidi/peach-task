@@ -9,7 +9,6 @@
   &-item {
     color: $grey;
     font-size: 18px;
-    font-style: normal;
     font-weight: 600;
     line-height: 20px;
     margin: 0 0 0 22px;
@@ -41,5 +40,42 @@
     border-bottom: 3px solid $red;
     color: $red;
     pointer-events: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .nav {
+    padding: 0;
+    &-item {
+      font-size: 14px;
+      line-height: 16px;
+      margin: 0 0 0 16px;
+    }
+  }
+  .map .nav-item {
+    margin: 0 0 0 16px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .map .nav-item {
+    margin: 0 16px 0 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .nav {
+    &-items {
+      flex-wrap: wrap;
+    }
+    &-item {
+      margin: 0 10px 5px 0;
+    }
+  }
+  .map .nav {
+    padding: 20px 0 0;
+    &-items {
+      flex-wrap: nowrap;
+    }
   }
 }

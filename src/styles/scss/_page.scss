@@ -3,7 +3,7 @@
   --swiper-navigation-size: 24px;
   --swiper-pagination-right: 8px;
   --swiper-pagination-bottom: 0;
-  --swiper-pagination-bullet-height: 6px;
+  --swiper-pagination-bullet-height: 4px;
   --swiper-pagination-bullet-width: 18%;
   --swiper-pagination-bullet-horizontal-gap: 10px;
   --swiper-pagination-bullet-vertical-gap: 6px;
@@ -16,7 +16,7 @@ body {
   width: 100%;
   font-family: "Proxima Nova Condensed", sans-serif;
   font-size: 100%;
-  line-height: 1;
+  line-height: normal;
   font-size: 14px;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -26,4 +26,26 @@ body {
 .page {
   max-width: 1250px;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 1180px) {
+  :root {
+    --swiper-pagination-bullet-width: 10%;
+    --swiper-pagination-bullet-horizontal-gap: 2px;
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+  .page {
+    padding: 0 30px;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .page {
+    padding: 0 14px;
+    border: 0.5px solid $border;
+  }
 }
